@@ -13,11 +13,11 @@
     
     GLuint _positionSlot;   //着色器中的顶点变量
     GLuint _colorSlot;      //着色器中的颜色变量
+    GLuint _textureSlot;    //着色器中的纹理变量
     
     GLuint _textureUniform;
     GLuint _textureUniform2;
     
-    GLuint _texture;
     GLuint _texture1;
     GLuint _texture2;
 }
@@ -115,10 +115,10 @@ static const float Texture[] = {
     //这里是获取刚才着色器里面的变量并使用
     _positionSlot = glGetAttribLocation(_program, "Position");
     _colorSlot    = glGetAttribLocation(_program, "InColor");
-    _texture      = glGetAttribLocation(_program, "TexCoordIn");
+    _textureSlot      = glGetAttribLocation(_program, "TexCoordIn");
     glEnableVertexAttribArray(_positionSlot);
     glEnableVertexAttribArray(_colorSlot);
-    glEnableVertexAttribArray(_texture);
+    glEnableVertexAttribArray(_textureSlot);
     
     //纹理1
     _textureUniform  = glGetUniformLocation(_program, "ourTexture1");
@@ -150,7 +150,7 @@ static const float Texture[] = {
      */
     glVertexAttribPointer(_positionSlot, 3, GL_FLOAT, GL_FALSE, 0, Vertices);
     glVertexAttribPointer(_colorSlot,    4, GL_FLOAT, GL_FALSE, 0, Colors);
-    glVertexAttribPointer(_texture,      2, GL_FLOAT, GL_FALSE, 0, Texture);
+    glVertexAttribPointer(_textureSlot,  2, GL_FLOAT, GL_FALSE, 0, Texture);
     
     //使用纹理单元
     glActiveTexture(GL_TEXTURE0);
@@ -175,7 +175,7 @@ static const float Texture[] = {
     
     glDisableVertexAttribArray(_positionSlot);
     glDisableVertexAttribArray(_colorSlot);
-    glDisableVertexAttribArray(_texture);
+    glDisableVertexAttribArray(_textureSlot);
     
     glDeleteTextures(1, &_texture1);
     glDeleteTextures(1, &_texture2);
