@@ -26,6 +26,13 @@
 		21E9AAE21E5C25F6006DD8D3 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E9AAE11E5C25F6006DD8D3 /* OpenGLES.framework */; };
 		21E9AAE41E5C3BA1006DD8D3 /* RectangleVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 21E9AAE31E5C3BA1006DD8D3 /* RectangleVertex.glsl */; };
 		21E9AAE61E5C3BC4006DD8D3 /* RectangleFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 21E9AAE51E5C3BC4006DD8D3 /* RectangleFragment.glsl */; };
+		21F174841E7942A4008004B1 /* OpenGLES_Texture2.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F174831E7942A4008004B1 /* OpenGLES_Texture2.m */; };
+		21F174861E7948A2008004B1 /* Texture2Vertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 21F174851E7948A2008004B1 /* Texture2Vertex.glsl */; };
+		21F174881E7948AF008004B1 /* Texture2Fragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 21F174871E7948AF008004B1 /* Texture2Fragment.glsl */; };
+		21F1748C1E7956B2008004B1 /* Texture2_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 21F1748B1E7956B2008004B1 /* Texture2_1.png */; };
+		21F174921E7A39E3008004B1 /* OpenGLES_Texture2_OperationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F174911E7A39E3008004B1 /* OpenGLES_Texture2_OperationView.m */; };
+		21F174941E7A3AD3008004B1 /* OpenGLES_Texture2_OperationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21F174931E7A3AD3008004B1 /* OpenGLES_Texture2_OperationView.xib */; };
+		21F174961E7AB7E2008004B1 /* Texture2_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21F174951E7AB7E2008004B1 /* Texture2_2.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +64,15 @@
 		21E9AAE11E5C25F6006DD8D3 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		21E9AAE31E5C3BA1006DD8D3 /* RectangleVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RectangleVertex.glsl; sourceTree = "<group>"; };
 		21E9AAE51E5C3BC4006DD8D3 /* RectangleFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RectangleFragment.glsl; sourceTree = "<group>"; };
+		21F174821E7942A4008004B1 /* OpenGLES_Texture2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLES_Texture2.h; sourceTree = "<group>"; };
+		21F174831E7942A4008004B1 /* OpenGLES_Texture2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLES_Texture2.m; sourceTree = "<group>"; };
+		21F174851E7948A2008004B1 /* Texture2Vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Texture2Vertex.glsl; sourceTree = "<group>"; };
+		21F174871E7948AF008004B1 /* Texture2Fragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Texture2Fragment.glsl; sourceTree = "<group>"; };
+		21F1748B1E7956B2008004B1 /* Texture2_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Texture2_1.png; sourceTree = "<group>"; };
+		21F174901E7A39E3008004B1 /* OpenGLES_Texture2_OperationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLES_Texture2_OperationView.h; sourceTree = "<group>"; };
+		21F174911E7A39E3008004B1 /* OpenGLES_Texture2_OperationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLES_Texture2_OperationView.m; sourceTree = "<group>"; };
+		21F174931E7A3AD3008004B1 /* OpenGLES_Texture2_OperationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpenGLES_Texture2_OperationView.xib; sourceTree = "<group>"; };
+		21F174951E7AB7E2008004B1 /* Texture2_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Texture2_2.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +118,7 @@
 				216C690E1E5C1E2100CD6BE6 /* ParentView.m */,
 				216C69091E5C1DE600CD6BE6 /* Rectangle */,
 				21CCFBE11E6E91C100F3622D /* Texture */,
+				21F174811E794292008004B1 /* Texture2 */,
 				216C68E71E5BF11600CD6BE6 /* Main.storyboard */,
 				216C68ED1E5BF11600CD6BE6 /* Assets.xcassets */,
 				216C68EF1E5BF11600CD6BE6 /* LaunchScreen.storyboard */,
@@ -159,6 +176,22 @@
 				21E9AAE11E5C25F6006DD8D3 /* OpenGLES.framework */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		21F174811E794292008004B1 /* Texture2 */ = {
+			isa = PBXGroup;
+			children = (
+				21F174821E7942A4008004B1 /* OpenGLES_Texture2.h */,
+				21F174831E7942A4008004B1 /* OpenGLES_Texture2.m */,
+				21F174901E7A39E3008004B1 /* OpenGLES_Texture2_OperationView.h */,
+				21F174911E7A39E3008004B1 /* OpenGLES_Texture2_OperationView.m */,
+				21F174931E7A3AD3008004B1 /* OpenGLES_Texture2_OperationView.xib */,
+				21F174851E7948A2008004B1 /* Texture2Vertex.glsl */,
+				21F174871E7948AF008004B1 /* Texture2Fragment.glsl */,
+				21F1748B1E7956B2008004B1 /* Texture2_1.png */,
+				21F174951E7AB7E2008004B1 /* Texture2_2.jpg */,
+			);
+			path = Texture2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,15 +253,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21F174941E7A3AD3008004B1 /* OpenGLES_Texture2_OperationView.xib in Resources */,
 				21E9AAE61E5C3BC4006DD8D3 /* RectangleFragment.glsl in Resources */,
 				21CCFBE61E6E92E800F3622D /* TextureVertex.glsl in Resources */,
+				21F174861E7948A2008004B1 /* Texture2Vertex.glsl in Resources */,
 				216C68F11E5BF11600CD6BE6 /* LaunchScreen.storyboard in Resources */,
 				216C68EE1E5BF11600CD6BE6 /* Assets.xcassets in Resources */,
+				21F1748C1E7956B2008004B1 /* Texture2_1.png in Resources */,
+				21F174961E7AB7E2008004B1 /* Texture2_2.jpg in Resources */,
 				216C68E91E5BF11600CD6BE6 /* Main.storyboard in Resources */,
 				21CCFC251E6FB70A00F3622D /* Texture1.jpg in Resources */,
 				21CCFC2F1E6FFDD600F3622D /* Texture2.jpg in Resources */,
 				21CCFBE81E6E92F600F3622D /* TextureFragment.glsl in Resources */,
 				21E9AAE41E5C3BA1006DD8D3 /* RectangleVertex.glsl in Resources */,
+				21F174881E7948AF008004B1 /* Texture2Fragment.glsl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,9 +278,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				21E9AADF1E5C2057006DD8D3 /* OpenGLES_Rectangle.m in Sources */,
+				21F174841E7942A4008004B1 /* OpenGLES_Texture2.m in Sources */,
 				216C68EC1E5BF11600CD6BE6 /* LearnOpenGLES.xcdatamodeld in Sources */,
 				21CCFBE41E6E91C100F3622D /* OpenGLES_Texture.m in Sources */,
 				21CCFC291E6FE0A900F3622D /* TextureManager.m in Sources */,
+				21F174921E7A39E3008004B1 /* OpenGLES_Texture2_OperationView.m in Sources */,
 				216C68E31E5BF11600CD6BE6 /* AppDelegate.m in Sources */,
 				216C68FA1E5BF12600CD6BE6 /* RootViewController.m in Sources */,
 				216C690F1E5C1E2100CD6BE6 /* ParentView.m in Sources */,
@@ -367,7 +407,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W68N6MQ3M7;
 				INFOPLIST_FILE = LearnOpenGLES/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.co.LearnOpenGLES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -380,7 +420,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W68N6MQ3M7;
 				INFOPLIST_FILE = LearnOpenGLES/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.co.LearnOpenGLES;
 				PRODUCT_NAME = "$(TARGET_NAME)";

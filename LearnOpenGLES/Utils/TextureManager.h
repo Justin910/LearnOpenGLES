@@ -16,4 +16,6 @@
  */
 + (GLuint)getTextureImageName:(NSString *)imageName;
 
++ (void)setParameterTextureName:(GLuint)texName target:(GLenum)target pname:(GLenum)pname paramID:(GLint)param;
+
 @end

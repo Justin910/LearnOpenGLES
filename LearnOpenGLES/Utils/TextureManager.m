@@ -53,11 +53,20 @@
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, spriteData);
     
     
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    //设置纹理循环模式
+    [TextureManager setParameterTextureName:texName target:GL_TEXTURE_2D pname:GL_TEXTURE_WRAP_S paramID:GL_REPEAT];
+    [TextureManager setParameterTextureName:texName target:GL_TEXTURE_2D pname:GL_TEXTURE_WRAP_T paramID:GL_REPEAT];
     
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    //设置纹理过滤模式
+    [TextureManager setParameterTextureName:texName target:GL_TEXTURE_2D pname:GL_TEXTURE_MIN_FILTER paramID:GL_NEAREST];
+    [TextureManager setParameterTextureName:texName target:GL_TEXTURE_2D pname:GL_TEXTURE_MAG_FILTER paramID:GL_NEAREST];
+
+    
+//    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+//    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+//
+//    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+//    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     
     // 解绑纹理对象(在本文这里解不解绑都一样，因为后面还是要绑定)
     glBindTexture(GL_TEXTURE_2D, 0);
@@ -65,6 +74,13 @@
     free(spriteData);
     
     return texName;
+}
+
++ (void)setParameterTextureName:(GLuint)texName target:(GLenum)target pname:(GLenum)pname paramID:(GLint)param {
+    
+    glBindTexture(target, texName);
+    
+    glTexParameteri(target, pname, param);
 }
 
 @end

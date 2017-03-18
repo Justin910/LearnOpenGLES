@@ -1,25 +1,30 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1adcff21-8c34-447c-87fb-f230fb26d30b++8247",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1adcff21-8c34-447c-87fb-f230fb26d30b++9248",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
-    "1adcff21-8c34-447c-87fb-f230fb26d30b++8247" : {
+    "1adcff21-8c34-447c-87fb-f230fb26d30b++9248" : {
 
     }
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "1adcff21-8c34-447c-87fb-f230fb26d30b++8247" : 9223372036854775807
+    "1adcff21-8c34-447c-87fb-f230fb26d30b++9248" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A6D784E7-D6B2-4659-9410-6E92A95A9216",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "1adcff21-8c34-447c-87fb-f230fb26d30b++8247" : "AJ_Desktop\/"
+    "1adcff21-8c34-447c-87fb-f230fb26d30b++9248" : "LearnOpenGLES\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "LearnOpenGLES",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
-  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Blog\/LearnOpenGLES\/LearnOpenGLES.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "LearnOpenGLES.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Justin910\/LearnOpenGLES.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1adcff21-8c34-447c-87fb-f230fb26d30b++9248"
+    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "svn:\/\/120.76.46.224\/home",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1adcff21-8c34-447c-87fb-f230fb26d30b++8247"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1adcff21-8c34-447c-87fb-f230fb26d30b++9248"
     }
   ]
 }
