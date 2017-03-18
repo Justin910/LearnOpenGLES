@@ -229,21 +229,29 @@ static float DefaultTexture[] = {
 
 - (TextureModeCallBackBlock)modifyfilterMode{
     
+    typeof(self) __weak _weakSelf = self;
     return ^(int value) {
-        _filterMode = value;
+        typeof(_weakSelf) __strong _strongSelf = _weakSelf;
+        
+        _strongSelf->_filterMode = value;
     };
 }
 - (TextureModeCallBackBlock)modifyCycleMode {
     
+    typeof(self) __weak _weakSelf = self;
     return ^(int value) {
+        typeof(_weakSelf) __strong _strongSelf = _weakSelf;
         
-        _cycleMode = value;
+        _strongSelf->_cycleMode = value;
     };
 }
 - (TextureModeCallBackBlock)modifyCoordinateOffset {
-
+    
+    typeof(self) __weak _weakSelf = self;
     return ^(int value){
-        _sCoordinateOffset = value / 100.0;
+        typeof(_weakSelf) __strong _strongSelf = _weakSelf;
+        
+        _strongSelf->_sCoordinateOffset = value / 100.0;
     };
 }
 
