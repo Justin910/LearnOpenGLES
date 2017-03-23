@@ -25,7 +25,8 @@
     
     self.ctls = @[@[@"OpenGLES_Rectangle",
                     @"OpenGLES_Texture",
-                    @"OpenGLES_Texture2"]
+                    @"OpenGLES_Texture2",
+                    @"OpenGLES_3DTransform"]
                   ];
 }
 
