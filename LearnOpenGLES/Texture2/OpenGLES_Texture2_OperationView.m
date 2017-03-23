@@ -27,6 +27,7 @@
         self.filterModeBlock(selectIndex ? GL_LINEAR : GL_NEAREST);
     }
 }
+
 - (IBAction)takeShouldCycleModeFrom:(UISegmentedControl *)sender {
     
     if(self.cycleModeBlock) {

@@ -16,6 +16,7 @@
 		216C68FA1E5BF12600CD6BE6 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 216C68F91E5BF12600CD6BE6 /* RootViewController.m */; };
 		216C69021E5C1C7C00CD6BE6 /* ShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 216C69011E5C1C7C00CD6BE6 /* ShowViewController.m */; };
 		216C690F1E5C1E2100CD6BE6 /* ParentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 216C690E1E5C1E2100CD6BE6 /* ParentView.m */; };
+		218F68C61E839AEB0050FF5D /* 3DTransform_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 218F68C51E839AEB0050FF5D /* 3DTransform_1.jpg */; };
 		21CCFBE41E6E91C100F3622D /* OpenGLES_Texture.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CCFBE31E6E91C100F3622D /* OpenGLES_Texture.m */; };
 		21CCFBE61E6E92E800F3622D /* TextureVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 21CCFBE51E6E92E800F3622D /* TextureVertex.glsl */; };
 		21CCFBE81E6E92F600F3622D /* TextureFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 21CCFBE71E6E92F600F3622D /* TextureFragment.glsl */; };
@@ -33,6 +34,12 @@
 		21F174921E7A39E3008004B1 /* OpenGLES_Texture2_OperationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F174911E7A39E3008004B1 /* OpenGLES_Texture2_OperationView.m */; };
 		21F174941E7A3AD3008004B1 /* OpenGLES_Texture2_OperationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21F174931E7A3AD3008004B1 /* OpenGLES_Texture2_OperationView.xib */; };
 		21F174961E7AB7E2008004B1 /* Texture2_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 21F174951E7AB7E2008004B1 /* Texture2_2.jpg */; };
+		21F1749A1E7FB71F008004B1 /* OpenGLES_3DTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F174991E7FB71F008004B1 /* OpenGLES_3DTransform.m */; };
+		21F1749C1E7FB74F008004B1 /* 3DTransformVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 21F1749B1E7FB74F008004B1 /* 3DTransformVertex.glsl */; };
+		21F1749E1E7FB760008004B1 /* 3DTransformFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 21F1749D1E7FB760008004B1 /* 3DTransformFragment.glsl */; };
+		21F174A01E7FFED0008004B1 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F1749F1E7FFED0008004B1 /* GLKit.framework */; };
+		21F174A31E800240008004B1 /* OpenGLES_3DTransform_OperationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F174A21E800240008004B1 /* OpenGLES_3DTransform_OperationView.m */; };
+		21F174A51E800247008004B1 /* OpenGLES_3DTransform_OperationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21F174A41E800247008004B1 /* OpenGLES_3DTransform_OperationView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +58,7 @@
 		216C69011E5C1C7C00CD6BE6 /* ShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowViewController.m; sourceTree = "<group>"; };
 		216C690D1E5C1E2100CD6BE6 /* ParentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParentView.h; sourceTree = "<group>"; };
 		216C690E1E5C1E2100CD6BE6 /* ParentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParentView.m; sourceTree = "<group>"; };
+		218F68C51E839AEB0050FF5D /* 3DTransform_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3DTransform_1.jpg; sourceTree = "<group>"; };
 		21CCFBE21E6E91C100F3622D /* OpenGLES_Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLES_Texture.h; sourceTree = "<group>"; };
 		21CCFBE31E6E91C100F3622D /* OpenGLES_Texture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLES_Texture.m; sourceTree = "<group>"; };
 		21CCFBE51E6E92E800F3622D /* TextureVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TextureVertex.glsl; sourceTree = "<group>"; };
@@ -73,6 +81,16 @@
 		21F174911E7A39E3008004B1 /* OpenGLES_Texture2_OperationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLES_Texture2_OperationView.m; sourceTree = "<group>"; };
 		21F174931E7A3AD3008004B1 /* OpenGLES_Texture2_OperationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpenGLES_Texture2_OperationView.xib; sourceTree = "<group>"; };
 		21F174951E7AB7E2008004B1 /* Texture2_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Texture2_2.jpg; sourceTree = "<group>"; };
+		21F174981E7FB71F008004B1 /* OpenGLES_3DTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLES_3DTransform.h; sourceTree = "<group>"; };
+		21F174991E7FB71F008004B1 /* OpenGLES_3DTransform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLES_3DTransform.m; sourceTree = "<group>"; };
+		21F1749B1E7FB74F008004B1 /* 3DTransformVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 3DTransformVertex.glsl; sourceTree = "<group>"; };
+		21F1749D1E7FB760008004B1 /* 3DTransformFragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 3DTransformFragment.glsl; sourceTree = "<group>"; };
+		21F1749F1E7FFED0008004B1 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		21F174A11E800240008004B1 /* OpenGLES_3DTransform_OperationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLES_3DTransform_OperationView.h; sourceTree = "<group>"; };
+		21F174A21E800240008004B1 /* OpenGLES_3DTransform_OperationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLES_3DTransform_OperationView.m; sourceTree = "<group>"; };
+		21F174A41E800247008004B1 /* OpenGLES_3DTransform_OperationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpenGLES_3DTransform_OperationView.xib; sourceTree = "<group>"; };
+		21F174A71E80CE8F008004B1 /* JZMatrixTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZMatrixTypes.h; sourceTree = "<group>"; };
+		21F174AB1E80CECE008004B1 /* JZMatrix4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZMatrix4.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21F174A01E7FFED0008004B1 /* GLKit.framework in Frameworks */,
 				21E9AAE21E5C25F6006DD8D3 /* OpenGLES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -119,6 +138,7 @@
 				216C69091E5C1DE600CD6BE6 /* Rectangle */,
 				21CCFBE11E6E91C100F3622D /* Texture */,
 				21F174811E794292008004B1 /* Texture2 */,
+				21F174971E7FB6F9008004B1 /* 3DTransform */,
 				216C68E71E5BF11600CD6BE6 /* Main.storyboard */,
 				216C68ED1E5BF11600CD6BE6 /* Assets.xcassets */,
 				216C68EF1E5BF11600CD6BE6 /* LaunchScreen.storyboard */,
@@ -166,6 +186,8 @@
 			children = (
 				21CCFC271E6FE0A900F3622D /* TextureManager.h */,
 				21CCFC281E6FE0A900F3622D /* TextureManager.m */,
+				21F174A71E80CE8F008004B1 /* JZMatrixTypes.h */,
+				21F174AB1E80CECE008004B1 /* JZMatrix4.h */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -173,6 +195,7 @@
 		21E9AAE01E5C25E5006DD8D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				21F1749F1E7FFED0008004B1 /* GLKit.framework */,
 				21E9AAE11E5C25F6006DD8D3 /* OpenGLES.framework */,
 			);
 			path = Frameworks;
@@ -192,6 +215,21 @@
 				21F174951E7AB7E2008004B1 /* Texture2_2.jpg */,
 			);
 			path = Texture2;
+			sourceTree = "<group>";
+		};
+		21F174971E7FB6F9008004B1 /* 3DTransform */ = {
+			isa = PBXGroup;
+			children = (
+				21F174981E7FB71F008004B1 /* OpenGLES_3DTransform.h */,
+				21F174991E7FB71F008004B1 /* OpenGLES_3DTransform.m */,
+				21F174A11E800240008004B1 /* OpenGLES_3DTransform_OperationView.h */,
+				21F174A21E800240008004B1 /* OpenGLES_3DTransform_OperationView.m */,
+				21F174A41E800247008004B1 /* OpenGLES_3DTransform_OperationView.xib */,
+				21F1749B1E7FB74F008004B1 /* 3DTransformVertex.glsl */,
+				21F1749D1E7FB760008004B1 /* 3DTransformFragment.glsl */,
+				218F68C51E839AEB0050FF5D /* 3DTransform_1.jpg */,
+			);
+			path = 3DTransform;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,17 +294,21 @@
 				21F174941E7A3AD3008004B1 /* OpenGLES_Texture2_OperationView.xib in Resources */,
 				21E9AAE61E5C3BC4006DD8D3 /* RectangleFragment.glsl in Resources */,
 				21CCFBE61E6E92E800F3622D /* TextureVertex.glsl in Resources */,
+				21F174A51E800247008004B1 /* OpenGLES_3DTransform_OperationView.xib in Resources */,
 				21F174861E7948A2008004B1 /* Texture2Vertex.glsl in Resources */,
 				216C68F11E5BF11600CD6BE6 /* LaunchScreen.storyboard in Resources */,
 				216C68EE1E5BF11600CD6BE6 /* Assets.xcassets in Resources */,
 				21F1748C1E7956B2008004B1 /* Texture2_1.png in Resources */,
 				21F174961E7AB7E2008004B1 /* Texture2_2.jpg in Resources */,
+				21F1749C1E7FB74F008004B1 /* 3DTransformVertex.glsl in Resources */,
 				216C68E91E5BF11600CD6BE6 /* Main.storyboard in Resources */,
 				21CCFC251E6FB70A00F3622D /* Texture1.jpg in Resources */,
 				21CCFC2F1E6FFDD600F3622D /* Texture2.jpg in Resources */,
 				21CCFBE81E6E92F600F3622D /* TextureFragment.glsl in Resources */,
 				21E9AAE41E5C3BA1006DD8D3 /* RectangleVertex.glsl in Resources */,
+				218F68C61E839AEB0050FF5D /* 3DTransform_1.jpg in Resources */,
 				21F174881E7948AF008004B1 /* Texture2Fragment.glsl in Resources */,
+				21F1749E1E7FB760008004B1 /* 3DTransformFragment.glsl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +322,9 @@
 				21E9AADF1E5C2057006DD8D3 /* OpenGLES_Rectangle.m in Sources */,
 				21F174841E7942A4008004B1 /* OpenGLES_Texture2.m in Sources */,
 				216C68EC1E5BF11600CD6BE6 /* LearnOpenGLES.xcdatamodeld in Sources */,
+				21F174A31E800240008004B1 /* OpenGLES_3DTransform_OperationView.m in Sources */,
 				21CCFBE41E6E91C100F3622D /* OpenGLES_Texture.m in Sources */,
+				21F1749A1E7FB71F008004B1 /* OpenGLES_3DTransform.m in Sources */,
 				21CCFC291E6FE0A900F3622D /* TextureManager.m in Sources */,
 				21F174921E7A39E3008004B1 /* OpenGLES_Texture2_OperationView.m in Sources */,
 				216C68E31E5BF11600CD6BE6 /* AppDelegate.m in Sources */,

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="OpenGLES_3DTransform_OperationView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6s0-FE-cZC">
+                    <rect key="frame" x="15" y="17.5" width="345" height="29"/>
+                    <segments>
+                        <segment title="缩放"/>
+                        <segment title="位移"/>
+                        <segment title="旋转"/>
+                    </segments>
+                    <connections>
+                        <action selector="takeShouldTransformModeFrom:" destination="iN0-l3-epB" eventType="valueChanged" id="mvv-Q7-mEX"/>
+                    </connections>
+                </segmentedControl>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-180" maxValue="180" translatesAutoresizingMaskIntoConstraints="NO" id="lJO-hf-ihs">
+                    <rect key="frame" x="47.5" y="79" width="314.5" height="31"/>
+                    <connections>
+                        <action selector="takeShouldTransformFrom:" destination="iN0-l3-epB" eventType="valueChanged" id="3Su-sv-kZ4"/>
+                    </connections>
+                </slider>
+                <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-180" maxValue="180" translatesAutoresizingMaskIntoConstraints="NO" id="61z-wp-NxD">
+                    <rect key="frame" x="47" y="141.5" width="314.5" height="31"/>
+                    <connections>
+                        <action selector="takeShouldTransformFrom:" destination="iN0-l3-epB" eventType="valueChanged" id="4vF-eX-uL5"/>
+                    </connections>
+                </slider>
+                <slider opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-180" maxValue="180" translatesAutoresizingMaskIntoConstraints="NO" id="aKX-co-mAV">
+                    <rect key="frame" x="47" y="204" width="314.5" height="31"/>
+                    <connections>
+                        <action selector="takeShouldTransformFrom:" destination="iN0-l3-epB" eventType="valueChanged" id="fzz-wj-XeF"/>
+                    </connections>
+                </slider>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONa-rU-TJi">
+                    <rect key="frame" x="15" y="84" width="34.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Y" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxu-Ez-fhB">
+                    <rect key="frame" x="15" y="146" width="34" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Z" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCF-o8-GRJ">
+                    <rect key="frame" x="15" y="209" width="34" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="lJO-hf-ihs" firstAttribute="trailing" secondItem="6s0-FE-cZC" secondAttribute="trailing" id="8Fe-mx-n7z"/>
+                <constraint firstItem="ONa-rU-TJi" firstAttribute="leading" secondItem="6s0-FE-cZC" secondAttribute="leading" id="BFQ-yN-4J9"/>
+                <constraint firstItem="gCF-o8-GRJ" firstAttribute="leading" secondItem="6s0-FE-cZC" secondAttribute="leading" id="FpB-wn-pae"/>
+                <constraint firstItem="lJO-hf-ihs" firstAttribute="centerY" secondItem="ONa-rU-TJi" secondAttribute="centerY" id="GgR-6T-tdo"/>
+                <constraint firstItem="aKX-co-mAV" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="1.75" id="OgW-E8-d0R"/>
+                <constraint firstItem="aKX-co-mAV" firstAttribute="width" secondItem="6s0-FE-cZC" secondAttribute="width" multiplier="0.9" id="PgO-ml-hyM"/>
+                <constraint firstItem="61z-wp-NxD" firstAttribute="leading" secondItem="Jxu-Ez-fhB" secondAttribute="trailing" id="Pua-JG-fQe"/>
+                <constraint firstItem="61z-wp-NxD" firstAttribute="trailing" secondItem="6s0-FE-cZC" secondAttribute="trailing" id="SFB-yL-9UA"/>
+                <constraint firstItem="6s0-FE-cZC" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="0.25" id="Yyp-wZ-pf5"/>
+                <constraint firstItem="lJO-hf-ihs" firstAttribute="width" secondItem="6s0-FE-cZC" secondAttribute="width" multiplier="0.9" id="cLq-uH-Qsj"/>
+                <constraint firstItem="lJO-hf-ihs" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="0.75" id="eaw-el-61y"/>
+                <constraint firstAttribute="trailing" secondItem="6s0-FE-cZC" secondAttribute="trailing" constant="15" id="iJa-8y-OhQ"/>
+                <constraint firstItem="61z-wp-NxD" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="1.25" id="kKK-We-FFY"/>
+                <constraint firstItem="61z-wp-NxD" firstAttribute="width" secondItem="6s0-FE-cZC" secondAttribute="width" multiplier="0.9" id="kyJ-O4-7Ae"/>
+                <constraint firstItem="61z-wp-NxD" firstAttribute="centerY" secondItem="Jxu-Ez-fhB" secondAttribute="centerY" id="mKb-wO-F6R"/>
+                <constraint firstItem="aKX-co-mAV" firstAttribute="trailing" secondItem="6s0-FE-cZC" secondAttribute="trailing" id="uAG-PJ-d3e"/>
+                <constraint firstItem="aKX-co-mAV" firstAttribute="centerY" secondItem="gCF-o8-GRJ" secondAttribute="centerY" id="uCb-Zw-Rz9"/>
+                <constraint firstItem="aKX-co-mAV" firstAttribute="leading" secondItem="gCF-o8-GRJ" secondAttribute="trailing" id="wF2-qV-cuM"/>
+                <constraint firstItem="6s0-FE-cZC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="yDu-7M-Dba"/>
+                <constraint firstItem="Jxu-Ez-fhB" firstAttribute="leading" secondItem="6s0-FE-cZC" secondAttribute="leading" id="z5b-tS-0QM"/>
+                <constraint firstItem="lJO-hf-ihs" firstAttribute="leading" secondItem="ONa-rU-TJi" secondAttribute="trailing" id="zUx-ce-iuj"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-21.5" y="90"/>
+        </view>
+    </objects>
+</document>

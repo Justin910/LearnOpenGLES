@@ -208,8 +208,6 @@ static float DefaultTexture[] = {
 
 #pragma mark - Other
 
-
-
 - (void)createOperationView {
     
     OpenGLES_Texture2_OperationView *view = [[NSBundle mainBundle]
