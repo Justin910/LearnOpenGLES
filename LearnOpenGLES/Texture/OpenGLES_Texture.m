@@ -165,7 +165,7 @@ static const float Texture[] = {
     glUniform1i(_textureUniform2, 1);
     
     
-    glDrawArrays(GL_TRIANGLE_STRIP, 0, sizeof(Vertices) / (sizeof(int) * 3));
+    glDrawArrays(GL_TRIANGLE_STRIP, 0, sizeof(Vertices) / (sizeof(float) * 3));
     
     //把缓冲区的数据呈现到UIView上
     [_context presentRenderbuffer:GL_RENDERBUFFER];
