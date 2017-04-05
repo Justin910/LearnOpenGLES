@@ -89,8 +89,6 @@
 		21F174A11E800240008004B1 /* OpenGLES_3DTransform_OperationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLES_3DTransform_OperationView.h; sourceTree = "<group>"; };
 		21F174A21E800240008004B1 /* OpenGLES_3DTransform_OperationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLES_3DTransform_OperationView.m; sourceTree = "<group>"; };
 		21F174A41E800247008004B1 /* OpenGLES_3DTransform_OperationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpenGLES_3DTransform_OperationView.xib; sourceTree = "<group>"; };
-		21F174A71E80CE8F008004B1 /* JZMatrixTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZMatrixTypes.h; sourceTree = "<group>"; };
-		21F174AB1E80CECE008004B1 /* JZMatrix4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZMatrix4.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,8 +184,6 @@
 			children = (
 				21CCFC271E6FE0A900F3622D /* TextureManager.h */,
 				21CCFC281E6FE0A900F3622D /* TextureManager.m */,
-				21F174A71E80CE8F008004B1 /* JZMatrixTypes.h */,
-				21F174AB1E80CECE008004B1 /* JZMatrix4.h */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
