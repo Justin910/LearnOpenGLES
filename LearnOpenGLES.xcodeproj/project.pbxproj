@@ -17,6 +17,15 @@
 		216C69021E5C1C7C00CD6BE6 /* ShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 216C69011E5C1C7C00CD6BE6 /* ShowViewController.m */; };
 		216C690F1E5C1E2100CD6BE6 /* ParentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 216C690E1E5C1E2100CD6BE6 /* ParentView.m */; };
 		218F68C61E839AEB0050FF5D /* 3DTransform_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 218F68C51E839AEB0050FF5D /* 3DTransform_1.jpg */; };
+		219517F41E94A1CE00A5D58B /* Texture3_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 219517EE1E94A1CE00A5D58B /* Texture3_1.png */; };
+		219517F51E94A1CE00A5D58B /* Texture3_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 219517EF1E94A1CE00A5D58B /* Texture3_2.png */; };
+		219517F61E94A1CE00A5D58B /* Texture3_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 219517F01E94A1CE00A5D58B /* Texture3_3.png */; };
+		219517F71E94A1CE00A5D58B /* Texture3_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 219517F11E94A1CE00A5D58B /* Texture3_4.png */; };
+		219517F81E94A1CE00A5D58B /* Texture3_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 219517F21E94A1CE00A5D58B /* Texture3_5.png */; };
+		219517F91E94A1CE00A5D58B /* Texture3_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 219517F31E94A1CE00A5D58B /* Texture3_6.png */; };
+		219517FE1E94A1E000A5D58B /* OpenGLES_Texture3.m in Sources */ = {isa = PBXBuildFile; fileRef = 219517FB1E94A1E000A5D58B /* OpenGLES_Texture3.m */; };
+		219517FF1E94A1E000A5D58B /* Texture3Fragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 219517FC1E94A1E000A5D58B /* Texture3Fragment.glsl */; };
+		219518001E94A1E000A5D58B /* Texture3Vertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 219517FD1E94A1E000A5D58B /* Texture3Vertex.glsl */; };
 		21CCFBE41E6E91C100F3622D /* OpenGLES_Texture.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CCFBE31E6E91C100F3622D /* OpenGLES_Texture.m */; };
 		21CCFBE61E6E92E800F3622D /* TextureVertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 21CCFBE51E6E92E800F3622D /* TextureVertex.glsl */; };
 		21CCFBE81E6E92F600F3622D /* TextureFragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 21CCFBE71E6E92F600F3622D /* TextureFragment.glsl */; };
@@ -59,6 +68,16 @@
 		216C690D1E5C1E2100CD6BE6 /* ParentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParentView.h; sourceTree = "<group>"; };
 		216C690E1E5C1E2100CD6BE6 /* ParentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParentView.m; sourceTree = "<group>"; };
 		218F68C51E839AEB0050FF5D /* 3DTransform_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3DTransform_1.jpg; sourceTree = "<group>"; };
+		219517EE1E94A1CE00A5D58B /* Texture3_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Texture3_1.png; sourceTree = "<group>"; };
+		219517EF1E94A1CE00A5D58B /* Texture3_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Texture3_2.png; sourceTree = "<group>"; };
+		219517F01E94A1CE00A5D58B /* Texture3_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Texture3_3.png; sourceTree = "<group>"; };
+		219517F11E94A1CE00A5D58B /* Texture3_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Texture3_4.png; sourceTree = "<group>"; };
+		219517F21E94A1CE00A5D58B /* Texture3_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Texture3_5.png; sourceTree = "<group>"; };
+		219517F31E94A1CE00A5D58B /* Texture3_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Texture3_6.png; sourceTree = "<group>"; };
+		219517FA1E94A1E000A5D58B /* OpenGLES_Texture3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLES_Texture3.h; sourceTree = "<group>"; };
+		219517FB1E94A1E000A5D58B /* OpenGLES_Texture3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLES_Texture3.m; sourceTree = "<group>"; };
+		219517FC1E94A1E000A5D58B /* Texture3Fragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Texture3Fragment.glsl; sourceTree = "<group>"; };
+		219517FD1E94A1E000A5D58B /* Texture3Vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Texture3Vertex.glsl; sourceTree = "<group>"; };
 		21CCFBE21E6E91C100F3622D /* OpenGLES_Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLES_Texture.h; sourceTree = "<group>"; };
 		21CCFBE31E6E91C100F3622D /* OpenGLES_Texture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLES_Texture.m; sourceTree = "<group>"; };
 		21CCFBE51E6E92E800F3622D /* TextureVertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TextureVertex.glsl; sourceTree = "<group>"; };
@@ -137,6 +156,7 @@
 				21CCFBE11E6E91C100F3622D /* Texture */,
 				21F174811E794292008004B1 /* Texture2 */,
 				21F174971E7FB6F9008004B1 /* 3DTransform */,
+				219517ED1E94A1B600A5D58B /* Texture3 */,
 				216C68E71E5BF11600CD6BE6 /* Main.storyboard */,
 				216C68ED1E5BF11600CD6BE6 /* Assets.xcassets */,
 				216C68EF1E5BF11600CD6BE6 /* LaunchScreen.storyboard */,
@@ -164,6 +184,23 @@
 				21E9AAE51E5C3BC4006DD8D3 /* RectangleFragment.glsl */,
 			);
 			path = Rectangle;
+			sourceTree = "<group>";
+		};
+		219517ED1E94A1B600A5D58B /* Texture3 */ = {
+			isa = PBXGroup;
+			children = (
+				219517FA1E94A1E000A5D58B /* OpenGLES_Texture3.h */,
+				219517FB1E94A1E000A5D58B /* OpenGLES_Texture3.m */,
+				219517FC1E94A1E000A5D58B /* Texture3Fragment.glsl */,
+				219517FD1E94A1E000A5D58B /* Texture3Vertex.glsl */,
+				219517EE1E94A1CE00A5D58B /* Texture3_1.png */,
+				219517EF1E94A1CE00A5D58B /* Texture3_2.png */,
+				219517F01E94A1CE00A5D58B /* Texture3_3.png */,
+				219517F11E94A1CE00A5D58B /* Texture3_4.png */,
+				219517F21E94A1CE00A5D58B /* Texture3_5.png */,
+				219517F31E94A1CE00A5D58B /* Texture3_6.png */,
+			);
+			path = Texture3;
 			sourceTree = "<group>";
 		};
 		21CCFBE11E6E91C100F3622D /* Texture */ = {
@@ -289,12 +326,20 @@
 			files = (
 				21F174941E7A3AD3008004B1 /* OpenGLES_Texture2_OperationView.xib in Resources */,
 				21E9AAE61E5C3BC4006DD8D3 /* RectangleFragment.glsl in Resources */,
+				219517F91E94A1CE00A5D58B /* Texture3_6.png in Resources */,
+				219517F41E94A1CE00A5D58B /* Texture3_1.png in Resources */,
 				21CCFBE61E6E92E800F3622D /* TextureVertex.glsl in Resources */,
 				21F174A51E800247008004B1 /* OpenGLES_3DTransform_OperationView.xib in Resources */,
+				219517F61E94A1CE00A5D58B /* Texture3_3.png in Resources */,
+				219517F71E94A1CE00A5D58B /* Texture3_4.png in Resources */,
 				21F174861E7948A2008004B1 /* Texture2Vertex.glsl in Resources */,
+				219517F51E94A1CE00A5D58B /* Texture3_2.png in Resources */,
+				219517FF1E94A1E000A5D58B /* Texture3Fragment.glsl in Resources */,
 				216C68F11E5BF11600CD6BE6 /* LaunchScreen.storyboard in Resources */,
 				216C68EE1E5BF11600CD6BE6 /* Assets.xcassets in Resources */,
 				21F1748C1E7956B2008004B1 /* Texture2_1.png in Resources */,
+				219517F81E94A1CE00A5D58B /* Texture3_5.png in Resources */,
+				219518001E94A1E000A5D58B /* Texture3Vertex.glsl in Resources */,
 				21F174961E7AB7E2008004B1 /* Texture2_2.jpg in Resources */,
 				21F1749C1E7FB74F008004B1 /* 3DTransformVertex.glsl in Resources */,
 				216C68E91E5BF11600CD6BE6 /* Main.storyboard in Resources */,
@@ -325,6 +370,7 @@
 				21F174921E7A39E3008004B1 /* OpenGLES_Texture2_OperationView.m in Sources */,
 				216C68E31E5BF11600CD6BE6 /* AppDelegate.m in Sources */,
 				216C68FA1E5BF12600CD6BE6 /* RootViewController.m in Sources */,
+				219517FE1E94A1E000A5D58B /* OpenGLES_Texture3.m in Sources */,
 				216C690F1E5C1E2100CD6BE6 /* ParentView.m in Sources */,
 				216C68E01E5BF11600CD6BE6 /* main.m in Sources */,
 				216C69021E5C1C7C00CD6BE6 /* ShowViewController.m in Sources */,

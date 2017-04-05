@@ -1,22 +1,24 @@
 //
-//  OpenGLES_3DTransform.m
+//  OpenGLES_Texture3.m
 //  LearnOpenGLES
 //
-//  Created by aj on 2017/3/20.
+//  Created by aj on 2017/3/30.
 //  Copyright © 2017年 Justin910. All rights reserved.
 //
 
-#import "OpenGLES_3DTransform.h"
+#import "OpenGLES_Texture3.h"
 #import <GLKit/GLKit.h>
 
 #import "OpenGLES_3DTransform_OperationView.h"
+#import "TextureManager.h"
 
-@interface OpenGLES_3DTransform (){
+@interface OpenGLES_Texture3 (){
     
     GLuint _depthRenderBuffer;  //深度缓冲
     
     GLuint _positionSlot;   //着色器中的顶点变量
     GLuint _colorSlot;      //着色器中的颜色变量
+    GLuint _textureSlot;    //着色器中的纹理变量
     
     GLuint _modelView;
     
@@ -25,6 +27,9 @@
     CGFloat _transformScale[3];         //缩放模式的XYZ轴
     CGFloat _transformTranslation[3];   //位移模式的XYZ轴
     CGFloat _transformRotation[3];      //旋转模式的XYZ轴
+    
+    GLuint _textureUniform; //纹理单元
+    GLuint _texture[6];     //纹理对象
 }
 
 @end
@@ -44,11 +49,29 @@ static const float Vertices[] = {
     -0.5,  0.5, -0.5,
      0.5,  0.5, -0.5,
     
-    //后面4个坐标
+    //左边4个坐标
     -0.5, -0.5, -0.5,
-     0.5, -0.5, -0.5,
+    -0.5, -0.5,  0.5,
     -0.5,  0.5, -0.5,
+    -0.5,  0.5,  0.5,
+    
+    //右边4个坐标
+     0.5, -0.5, -0.5,
+     0.5, -0.5,  0.5,
      0.5,  0.5, -0.5,
+     0.5,  0.5,  0.5,
+    
+    //上边4个坐标
+     0.5,  0.5, -0.5,
+    -0.5,  0.5, -0.5,
+     0.5,  0.5,  0.5,
+    -0.5,  0.5,  0.5,
+    //下边4个坐标
+     0.5, -0.5, -0.5,
+    -0.5, -0.5, -0.5,
+     0.5, -0.5,  0.5,
+    -0.5, -0.5,  0.5,
+    
 };
 
 //4个点的颜色(分别表示RGBA值)
@@ -63,40 +86,72 @@ static const float Colors[] = {
     0, 1, 0, 1,
     0, 0, 1, 1,
     0, 0, 0, 1,
+};
+
+static const float Texture[] = {
     
-    1, 0, 0, 1,
-    0, 1, 0, 1,
-    0, 0, 1, 1,
-    0, 0, 0, 1,
+    0, 0,
+    1, 0,
+    0, 1,
+    1, 1,
+    
+    0, 0,
+    1, 0,
+    0, 1,
+    1, 1,
+    
+    0, 0,
+    1, 0,
+    0, 1,
+    1, 1,
+    
+    0, 0,
+    1, 0,
+    0, 1,
+    1, 1,
+    
+    0, 0,
+    1, 0,
+    0, 1,
+    1, 1,
+    
+    0, 0,
+    1, 0,
+    0, 1,
+    1, 1,
 };
 
 static const GLubyte Indices[] = {
     
+    //前面
     0,  1,  2,
     2,  3,  1,
     
+    //后面
     4,  5,  6,
     6,  7,  5,
     
-    2,  3,  6,
-    6,  7,  3,
+    //左面
+    8,  9, 10,
+    10, 11, 9,
     
-    0,  1,  4,
-    4,  5,  1,
+    //右面
+    12, 13, 14,
+    14, 15, 13,
     
-    0,  4,  2,
-    2,  6,  4,
+    //上面
+    16, 17, 18,
+    18, 19, 17,
     
-    1,  5,  3,
-    3,  7,  5
+    //下面
+    20, 21, 22,
+    22, 23, 21
 };
-
-
 
 #define PI 3.1415926535898
 #define ANGLE_TO_RADIAN(angle) angle * (PI / 180.0f)
 
-@implementation OpenGLES_3DTransform
+@implementation OpenGLES_Texture3
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -119,8 +174,6 @@ static const GLubyte Indices[] = {
     }
     return self;
 }
-
-#pragma mark - OpenGLES Related
 
 /**
  *  设置渲染缓冲区
@@ -160,8 +213,8 @@ static const GLubyte Indices[] = {
 - (void)compileShaders {
     
     //编译顶点着色器和片段着色器
-    GLuint vertexShader   = [self compileShader:@"3DTransformVertex" withType:GL_VERTEX_SHADER];
-    GLuint fragmentShader = [self compileShader:@"3DTransformFragment" withType:GL_FRAGMENT_SHADER];
+    GLuint vertexShader   = [self compileShader:@"Texture3Vertex" withType:GL_VERTEX_SHADER];
+    GLuint fragmentShader = [self compileShader:@"Texture3Fragment" withType:GL_FRAGMENT_SHADER];
     
     //把顶点和片段着色器链接到一个完整的程序
     _program = glCreateProgram();
@@ -181,19 +234,30 @@ static const GLubyte Indices[] = {
     
     //这里是获取刚才着色器里面的变量并使用
     _positionSlot = glGetAttribLocation(_program, "Position");
-    _colorSlot    = glGetAttribLocation(_program, "InColor");
+//    _colorSlot    = glGetAttribLocation(_program, "InColor");
+    _textureSlot  = glGetAttribLocation(_program, "TexCoordIn");
     glEnableVertexAttribArray(_positionSlot);
-    glEnableVertexAttribArray(_colorSlot);
+//    glEnableVertexAttribArray(_colorSlot);
+    glEnableVertexAttribArray(_textureSlot);
     
     
     _modelView = glGetUniformLocation(_program, "ModelView");
+    
+    //获取纹理单元
+    _textureUniform  = glGetUniformLocation(_program, "ourTexture");
+    //获取纹理对象
+    for(int i = 0; i < 6; i++) {
+        
+        NSString *imageName = [NSString stringWithFormat:@"Texture3_%d.png", i + 1];
+        _texture[i] = [TextureManager getTextureImageName:imageName];
+    }
 }
 
 - (void)render:(CADisplayLink *)displayLink {
     
     //用指定的颜色清除,清除颜色被设置为(0.5f, 0.5f, 0.5f, 1.0f), 所以为灰色
     glClearColor(0.8f, 0.8f, 0.8f, 1.0f);
-//    glClear(GL_COLOR_BUFFER_BIT);
+    //    glClear(GL_COLOR_BUFFER_BIT);
     glEnable(GL_DEPTH_TEST);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
@@ -211,8 +275,10 @@ static const GLubyte Indices[] = {
      *  ptr:指向数据的指针
      */
     glVertexAttribPointer(_positionSlot, 3, GL_FLOAT, GL_FALSE, 0, Vertices);
-    glVertexAttribPointer(_colorSlot,    4, GL_FLOAT, GL_FALSE, 0, Colors);
-
+//    glVertexAttribPointer(_colorSlot,    4, GL_FLOAT, GL_FALSE, 0, Colors);
+    glVertexAttribPointer(_textureSlot,  2, GL_FLOAT, GL_FALSE, 0, Texture);
+    
+    
     GLKMatrix4 modelView = GLKMatrix4MakeTranslation(_transformTranslation[0],
                                                      _transformTranslation[1],
                                                      _transformTranslation[2]);
@@ -228,16 +294,13 @@ static const GLubyte Indices[] = {
     
     //给着色器变量赋值
     /*
-        location :  变量的位置
-        count    :  要更改变量的个数
-        transpose:  是否需要转置
-        value    :  给出对应count个元素的指针
-    */
+     location :  变量的位置
+     count    :  要更改变量的个数
+     transpose:  是否需要转置
+     value    :  给出对应count个元素的指针
+     */
     glUniformMatrix4fv(_modelView, 1, GL_FALSE, modelView.m);
     
-    
-    
-//    glDrawArrays(GL_TRIANGLE_STRIP, 0, sizeof(Vertices) / (sizeof(float) * 3));
     //绘制
     /*
      *  mode   :    绘制的方式
@@ -245,8 +308,20 @@ static const GLubyte Indices[] = {
      *  type   :    索引值的类型
      *  indices:    索引数组的指针
      */
-    glDrawElements(GL_TRIANGLES, sizeof(Indices)/sizeof(Indices[0]), GL_UNSIGNED_BYTE, Indices);
-
+    for(int i = 0; i < 6; i++) {
+        
+        //使用纹理单元
+        glActiveTexture(GL_TEXTURE0 + i);
+        //绑定纹理对象
+        glBindTexture(GL_TEXTURE_2D, _texture[i]);
+        //这里的参数要对应纹理单元(如果纹理单元为0,这里也要给0)
+        glUniform1i(_textureUniform, i);
+        
+        GLubyte *p = (GLubyte *)&Indices[6*i];
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_BYTE, p);
+    }
+//    glDrawElements(GL_TRIANGLES, sizeof(Indices)/sizeof(Indices[0]), GL_UNSIGNED_BYTE, Indices);
+    
     
     //把缓冲区的数据呈现到UIView上
     [_context presentRenderbuffer:GL_RENDERBUFFER];
@@ -257,9 +332,9 @@ static const GLubyte Indices[] = {
 - (void)createOperationView {
     
     OpenGLES_3DTransform_OperationView *view = [[NSBundle mainBundle]
-                                             loadNibNamed:@"OpenGLES_3DTransform_OperationView"
-                                             owner:nil
-                                             options:nil][0];
+                                                loadNibNamed:@"OpenGLES_3DTransform_OperationView"
+                                                owner:nil
+                                                options:nil][0];
     
     view.frame = CGRectMake(0, 0, _width, 250.0f);
     
@@ -292,28 +367,31 @@ static const GLubyte Indices[] = {
                 
                 _strongSelf->_transformScale[tag] = value/180.0 + 1;
             }
-            break;
+                break;
             case TransformMode_Translation:{//位移
                 
                 _strongSelf->_transformTranslation[tag] = value / 180.0;
             }
-            break;
+                break;
             case TransformMode_Rotation:{//旋转
                 
                 _strongSelf->_transformRotation[tag] = ANGLE_TO_RADIAN(value);
             }
-            break;
+                break;
             default:
-            break;
+                break;
         }
     };
 }
-
 
 #pragma mark - Dealloc
 - (void)dealloc {
     glDisableVertexAttribArray(_positionSlot);
     glDisableVertexAttribArray(_colorSlot);
+    glDisableVertexAttribArray(_textureSlot);
+    
+    glDeleteTextures(6, _texture);
+    glBindTexture(GL_TEXTURE_2D, 0);
 }
 
 @end
