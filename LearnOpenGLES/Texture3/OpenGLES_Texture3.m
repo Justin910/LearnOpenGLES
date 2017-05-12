@@ -382,6 +382,7 @@ static const GLubyte Indices[] = {
                 break;
         }
     };
+    
 }
 
 #pragma mark - Dealloc

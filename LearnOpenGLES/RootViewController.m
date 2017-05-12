@@ -27,7 +27,8 @@
                     @"OpenGLES_Texture",
                     @"OpenGLES_Texture2",
                     @"OpenGLES_3DTransform",
-                    @"OpenGLES_Texture3"]
+                    @"OpenGLES_Texture3",
+                    @"OpenGLES_CoordinateSystem"]
                   ];
 }
 
