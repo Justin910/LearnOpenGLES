@@ -10,7 +10,7 @@ varying   vec2 TexCoordOut;
 
 void main(void){
     
-    OutColor = InColor;
+    OutColor    = InColor;
     
     gl_Position = ModelView * Position;
     

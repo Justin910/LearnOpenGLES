@@ -1,26 +1,26 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "933EA8466E75B9FE4F8CCEF5CEBCC8956271520E",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1adcff21-8c34-447c-87fb-f230fb26d30b++9248+++8734286",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
-    "933EA8466E75B9FE4F8CCEF5CEBCC8956271520E" : {
+    "1adcff21-8c34-447c-87fb-f230fb26d30b++9248+++8734286" : {
 
     },
-    "1adcff21-8c34-447c-87fb-f230fb26d30b++9248" : {
+    "1adcff21-8c34-447c-87fb-f230fb26d30b++8247+++529C871" : {
 
     },
-    "1adcff21-8c34-447c-87fb-f230fb26d30b++8247" : {
+    "1adcff21-8c34-447c-87fb-f230fb26d30b++9248+++8CDE4D1" : {
 
     }
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "933EA8466E75B9FE4F8CCEF5CEBCC8956271520E" : 9223372036854775807,
-    "1adcff21-8c34-447c-87fb-f230fb26d30b++9248" : 9223372036854775807,
-    "1adcff21-8c34-447c-87fb-f230fb26d30b++8247" : 9223372036854775807
+    "1adcff21-8c34-447c-87fb-f230fb26d30b++9248+++8734286" : 9223372036854775807,
+    "1adcff21-8c34-447c-87fb-f230fb26d30b++8247+++529C871" : 9223372036854775807,
+    "1adcff21-8c34-447c-87fb-f230fb26d30b++9248+++8CDE4D1" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A6D784E7-D6B2-4659-9410-6E92A95A9216",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "933EA8466E75B9FE4F8CCEF5CEBCC8956271520E" : "LearnOpenGLES\/",
-    "1adcff21-8c34-447c-87fb-f230fb26d30b++9248" : "LearnOpenGLES\/",
-    "1adcff21-8c34-447c-87fb-f230fb26d30b++8247" : "..\/.."
+    "1adcff21-8c34-447c-87fb-f230fb26d30b++9248+++8734286" : "LearnOpenGLES\/",
+    "1adcff21-8c34-447c-87fb-f230fb26d30b++8247+++529C871" : "..\/..",
+    "1adcff21-8c34-447c-87fb-f230fb26d30b++9248+++8CDE4D1" : "LearnOpenGLES\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "LearnOpenGLES",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -29,17 +29,17 @@
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "svn:\/\/120.76.46.224\/home",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1adcff21-8c34-447c-87fb-f230fb26d30b++8247"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1adcff21-8c34-447c-87fb-f230fb26d30b++8247+++529C871"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Justin910\/LearnOpenGLES.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1adcff21-8c34-447c-87fb-f230fb26d30b++9248"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1adcff21-8c34-447c-87fb-f230fb26d30b++9248+++8734286"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "svn:\/\/120.76.46.224\/home",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "933EA8466E75B9FE4F8CCEF5CEBCC8956271520E"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1adcff21-8c34-447c-87fb-f230fb26d30b++9248+++8CDE4D1"
     }
   ]
 }
